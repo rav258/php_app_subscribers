@@ -33,5 +33,10 @@ class Database {
         $stmt = $this->pdo->prepare("DELETE FROM subscribers WHERE id = :id");
         $stmt->execute(['id' => $id]);
     }
+
+    public function getDataFromView($viewName) {
+        $stmt = $this->pdo->query("SELECT * FROM $viewName");
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>

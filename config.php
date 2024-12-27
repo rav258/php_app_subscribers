@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
-$username = "username";
-$password = "your_password";
+$username = "root";
+$password = "piko12";
 $database = "test";
 
 try {
